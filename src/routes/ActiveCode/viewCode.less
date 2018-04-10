@@ -1,0 +1,225 @@
+.root {
+  padding: 20px 30px;
+  background-color: #f5f4f4;
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+  }
+  .listName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .statistics {
+    width: 260px;
+    background-color: #fff;
+    height: 220px;
+    padding: 0 20px;
+    border: 1px solid #e3e3e3;
+    min-width: 250px;
+    :global {
+      .ant-card-head {
+        padding: 0;
+        border-bottom: none;
+      }
+      .ant-card-body {
+        padding: 0;
+      }
+      .ant-card-loading-content {
+        padding: 0;
+      }
+      .ant-card-head-title {
+        font-weight: normal;
+        color: #999;
+      }
+      .ant-card-body .ant-card-loading-content {
+        border-bottom: none!important;
+      }
+    }
+    .number {
+      color: #333;
+      font-size: 24px;
+      width: 100%;
+      h2 {
+        font-weight: normal;
+        margin-top: 10px;
+        line-height: 18px;
+      }
+    }
+    .todayScan {
+      margin-top: 15px;
+      padding-top: 10px;
+      letter-spacing: 0;
+      line-height: 12px;
+      font-size: 14px;
+      .todayScanCount {
+        color: #333;
+        color: rgba(0, 0, 0, .87);
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      .updateTime {
+        color: #999;
+        margin-top: 18px;
+        font-size: 13px;
+      }
+      .createTime {
+        color: #999;
+        margin-top: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+  .content {
+    width: 375px;
+    min-width: 375px;
+    height: 667px;
+    background-color: #fff;
+    margin: 0 20px;
+    overflow: hidden;
+    border: 1px solid #e3e3e3;
+    .imgbox {
+      width: 100%;
+      min-width: 350px;
+      position: relative;
+      padding: 0 10px;
+      img {
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        position: absolute;
+        font-size: 16px;
+        width: 100%;
+        bottom: 10px;
+        margin-left: -10px;
+        color: #2a2d34;
+        font-family: PingFangSC-Medium;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+    }
+    .content_info {
+      height: 610px;
+      overflow-x: hidden;
+    }
+  }
+  .action {
+    width: 260px;
+    height: 667px;
+    background-color: #fff;
+    padding: 40px 46px;
+    border: 1px solid #e3e3e3;
+    .title {
+      text-align: center;
+      h2 {
+        font-size: 14px;
+        color: #474747;
+        letter-spacing: 0;
+        line-height: 16px;
+        cursor: pointer;
+      }
+      img {
+        margin-top: 18px;
+        width: 150px;
+      }
+    }
+    .download {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      .beauty {
+        margin-top: 16px;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        span {
+          font-size: 12px;
+          padding: 0 10px;
+          color: #999;
+          line-height: 12px;
+          cursor: pointer;
+          &:first-child {
+            border-right: 1px solid #999;
+          }
+        }
+      }
+    }
+    .moreaction {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      .btnItem {
+        margin-top: 12px;
+      }
+    }
+  }
+  :global(.ncPreview) {
+    & {
+      margin: 20px;
+    }
+  }
+  :global {
+    .ant-notification-topLeft {
+      z-index: 1200;
+    }
+    .ant-btn:hover, .ant-btn:focus {
+      color: #4caf50;
+      border-color: #4caf50;
+    }
+  }
+  .editname {
+    /*margin-left: 10px;*/
+    /*display: inline-block;*/
+    display: none;
+  }
+  .editNameTitle {
+    &:hover {
+      .editname {
+        margin-left: 5px;
+        display: inline-block;
+        i {
+          position: relative;
+          top: -3px;
+          left: 6px;
+        }
+      }
+    }
+  }
+  .editInput {
+    z-index: 1000;
+  }
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 1200;
+  .catologueName {
+    color: #4caf50;
+    padding: 0 2px;
+    cursor: pointer;
+  }
+}
+
+.qrcodemask {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+

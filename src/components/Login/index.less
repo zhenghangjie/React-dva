@@ -1,0 +1,89 @@
+@import "~antd/lib/style/themes/default.less";
+
+.none {
+  display: none;
+}
+
+.loginFrame {
+  width: 642px;
+  height: 430px;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 50%;
+  margin-right: -314px;
+  top: 50%;
+  margin-top: -206px;
+  width: 20px;
+  height: 20px;
+  z-index: 99999999;
+  cursor: pointer;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 700;
+  font-size: 20px;
+  opacity: .2;
+}
+
+.closeBtn:hover {
+  opacity: .5;
+}
+
+:global {
+  .ant-modal-body {
+    padding: 0;
+  }
+}
+
+.loginModal,
+.joinModal {
+  min-width: 642px;
+  height: 430px;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  margin-top: -235px;
+  left: 50%;
+  margin-left: -320px;
+}
+
+.loginModal {
+  :global {
+    .ant-modal-content,
+    .ant-modal-body,
+    .ant-spin-nested-loading,
+    .ant-spin-container {
+      height: 100%;
+    }
+    .ant-modal-content {
+      box-shadow: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.joinModal {
+  :global {
+    .ant-modal-content {
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .ant-modal-close {
+      right: 156px;
+    }
+  }
+}
+
+.loginModal, .joinModal {
+  :global {
+    .ant-spin-container {
+      text-align: center;
+    }
+    iframe {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}

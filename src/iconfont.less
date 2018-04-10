@@ -1,0 +1,10 @@
+/* 引入 icon class 文件 */
+@import  "//at.alicdn.com/t/font_507721_9tnedn1q2txx0f6r.css";
+
+/* 设置使用字体的优先级 clifont 高 */
+:global(.anticon) {  /* :global() 是为了覆盖全局class .anticon 的样式 */
+  &:before {
+    /* 优先调用 clifont 字体 */
+    font-family: "anticon", "clifont" !important;
+  }
+}

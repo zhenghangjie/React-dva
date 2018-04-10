@@ -1,0 +1,420 @@
+/* 目录样式 */
+
+.normal {
+  background-color: #f8f8f8;
+  padding: 10px 10px 64px;
+  .titleInfo {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 156px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-top: 7px;
+  }
+  :global(.ant-tree li .ant-tree-node-content-wrapper:hover) {
+    & .block_inline {
+      display: inline-block;
+    }
+    & .titleInfo {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      width: 100px;
+    }
+  }
+  :global {
+    .ant-tree-title {
+      font-size: 12px;
+      position: absolute;
+      left: 4px;
+      z-index: 2000;
+      line-height: 22px;
+      /* padding-left: 36px;*/
+    }
+    .ant-tree li {
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    /* 展开箭头与loading得图标的的位置控制 */
+    .ant-tree li span.ant-tree-switcher,
+    .ant-tree li span.ant-tree-iconEle {
+      position: relative;
+      z-index: 2;
+      top: 5px;
+      width: 12px;
+    }
+
+    .ant-tree li span.ant-tree-icon_loading:after {
+      color: #4caf50;
+    }
+
+    /* loading 图标的背景颜色 */
+    .ant-tree-node-selected span.ant-tree-iconEle,
+    .ant-tree-node-selected span.ant-tree-iconEle:after,
+    .ant-tree-node-selected span.ant-tree-icon_loading,
+    .ant-tree li .ant-tree-node-content-wrapper:hover span.ant-tree-iconEle,
+    .ant-tree li .ant-tree-node-content-wrapper:hover span.ant-tree-iconEle:after,
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      background-color: #edf7ee;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      color: #4caf50;
+    }
+    /* 调整loding的样式 */
+    .ant-tree li span.ant-tree-icon_loading {
+      top: 6px;
+    }
+    /* 将默认的span的hover的样式变成白色 */
+    .ant-tree li .ant-tree-node-content-wrapper:hover {
+      background-color: #fff;
+      color: #4caf50;
+    }
+    .ant-tree > li:hover {
+      :global {
+        /* 二级列表样式不改变 */
+        & ul li .ant-tree-switcher {
+          color: inherit;
+        }
+        & .ant-tree-switcher {
+          color: @green;
+        }
+        /* 子节点二级列表样式改变 */
+        & ul li:hover {
+          color: @green;
+        }
+      }
+    }
+    .ant-tree > ul > li:hover {
+      :global {
+        & .ant-tree-switcher {
+          color: @green;
+        }
+      }
+    }
+    /* span节点的长度设置，便于选中，触发事件 */
+    .ant-tree li .ant-tree-node-content-wrapper {
+      padding: 0;
+      height: 36px;
+      /*line-height: 36px;*/
+      width: 200px;
+      position: relative;
+      /* left: -36px; */
+    }
+    /* span节点hover时候的样式 */
+    .ant-tree li .ant-tree-node-content-wrapper:hover:before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 36px;
+      top: 0;
+      left: -100px;
+      background-color: #edf7ee;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper:hover:after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      /* +2px hack border-radius */
+      height: 36px;
+      top: 0;
+      right: -220px;
+      background-color: #edf7ee;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    /* 被选中的span，时候的样式 */
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected:before {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 36px;
+      top: 0;
+      left: -160px;
+      background-color: #edf7ee;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected:after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      /* +2px hack border-radius */
+      height: 36px;
+      top: 0;
+      right: -220px;
+      background-color: #edf7ee;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+
+    /* 移动的样式上下边框线样式 */
+    .ant-tree li span[draggable], .ant-tree li span[draggable="true"] {
+      border-top: 0 solid transparent;
+      border-bottom: none;
+      margin-top: 0;
+    }
+    .ant-tree .drag-over-gap-bottom .ant-tree-node-content-wrapper .ant-tree-title {
+      border-bottom: 2px solid #bae7ff;
+    }
+    .ant-tree .drag-over-gap-top .ant-tree-node-content-wrapper .ant-tree-title {
+      border-top: 2px solid #bae7ff;
+      margin-top: -2px;
+    }
+    .ant-tree .drag-over-gap-top .ant-tree-child-tree-open li span.ant-tree-node-content-wrapper .ant-tree-title,
+    .ant-tree .drag-over-gap-bottom .ant-tree-child-tree-open li span.ant-tree-node-content-wrapper .ant-tree-title {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+}
+
+/* 移动目录样式 */
+.move {
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  :global {
+    .ant-btn {
+      border: none;
+    }
+    .ant-tree-title {
+      font-size: 12px;
+      position: absolute;
+      left: 4px;
+      z-index: 2000;
+    }
+    .ant-tree li {
+      margin: 0;
+      padding: 0;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper:hover .ant-tree-title > div {
+      background-color: #f8f8f8;
+    }
+    .ant-tree li span.ant-tree-switcher,
+    .ant-tree li span.ant-tree-iconEle {
+      position: relative;
+      z-index: 2;
+      top: 2px;
+      width: 12px;
+    }
+    .ant-tree-node-selected span.ant-tree-iconEle {
+      background-color: #f8f8f8!important;
+    }
+    .ant-tree-node-selected span.ant-tree-iconEle:after {
+      background-color: #f8f8f8!important;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      padding: 0;
+      height: 30px;
+      line-height: 30px;
+      width: 1000px;
+      position: relative;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      background-color: #f8f8f8;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper:hover {
+      background-color: #f8f8f8;
+    }
+
+    .ant-tree-node-selected span.ant-tree-icon_loading {
+      background-color: #f8f8f8;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper:hover:before {
+      content: '';
+      position: absolute;
+      width: 1000px;
+      height: 30px;
+      top: 0;
+      left: -180px;
+      background-color: #f8f8f8;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper:hover:after {
+      content: '';
+      position: absolute;
+      width: 1000px;
+      /* +2px hack border-radius */
+      height: 30px;
+      top: 0;
+      right: -1000px;
+      background-color: #f8f8f8;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected:before {
+      content: '';
+      position: absolute;
+      width: 1000px;
+      height: 30px;
+      top: 0;
+      left: -180px;
+      background-color: #f8f8f8;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected:after {
+      content: '';
+      position: absolute;
+      width: 1000px;
+      /* +2px hack border-radius */
+      height: 30px;
+      top: 0;
+      right: -1000px;
+      background-color: #f8f8f8;
+      border-top: 2px transparent solid;
+      border-bottom: 2px transparent solid;
+    }
+  }
+}
+
+.categoryTitle {
+  font-size: 16px;
+  color: #212121;
+  height: 56px;
+  line-height: 56px;
+  box-sizing: border-box;
+  span {
+    display: inline-block;
+    font-size: 10px;
+    color: #3f3f3f;
+    letter-spacing: 0;
+  }
+}
+
+.catalog_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100;
+  height: 100%;
+  z-index: 1999;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.block_inline {
+  display: none;
+  left: 100px;
+  position: absolute;
+  margin-top: 7px;
+}
+
+:global(.ant-tree > li > ul .ant-tree-node-content-wrapper) {
+  & .block_inline {
+    left: 82px;
+  }
+}
+
+:global(.ant-tree > li > ul > li > ul .ant-tree-node-content-wrapper) {
+  & .block_inline {
+    left: 64px;
+  }
+}
+
+.show {
+  display: inline-block !important;
+}
+
+.edit_input {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  z-index: 3000;
+}
+
+.button_block {
+  width: 160px;
+  margin: 20px 10px;
+  font-size: 12px;
+  border: 1px solid #d9d9d9;
+  i {
+    font-weight: bold;
+  }
+}
+
+.button_block:hover {
+  color: @green;
+  border: 1px solid @green;
+}
+
+.defaultAdd {
+  .add {
+    margin-left: 30px;
+  }
+  .delete {
+    display: none;
+  }
+  .edit {
+    display: none;
+  }
+}
+
+.ItemLevelThree {
+  .add {
+    display: none;
+  }
+  .edit {
+    margin-left: 23px;
+  }
+}
+
+.example {
+  text-align: center;
+  border-radius: 4px;
+  height: 500px;
+  line-height: 500px;
+  :global {
+    .ant-spin-dot i {
+      background-color: #4caf50;
+    }
+    .ant-spin-dot i:nth-child(1) {
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .ant-spin-dot i:nth-child(2) {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .ant-spin-dot i:nth-child(3) {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    .ant-spin-dot i:nth-child(4) {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
+
+:global {
+  .ant-message {
+    z-index: 1200;
+  }
+}

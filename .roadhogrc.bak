@@ -1,0 +1,33 @@
+{
+  "entry": "src/index.js",
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        ["import", { "libraryName": "antd", "style": true }]
+      ]
+    },
+    "production": {
+      "publicPath": "",
+      "extraBabelPlugins": [
+        "transform-runtime",
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        ["import", { "libraryName": "antd", "style": true }]
+      ]
+    }
+  },
+  "proxy": {
+    "/mock": {
+      "target": "http://easy-mock.com/mock/5a1266f7c2ddd679e315b4a9/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/mock" : "" }
+    }
+  },
+  "ignoreMomentLocale": true,
+  "theme": "./src/theme.js",
+  "hash": true
+}

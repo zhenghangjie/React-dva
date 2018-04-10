@@ -1,0 +1,22 @@
+const origin = {
+  staticDomain: '//static-develop.clewm.net/cli',
+  // cliDomain: '//cliim.net',
+  cliDomain: 'cli.me',
+  // userDomain: '//user.cliim.net',
+  userDomain: '//user.cli.me',
+  // ncApiDomain: '//net-nc.cli.im',
+  ncApiDomain: '//nc.cliim.net',
+  // uploadDomain: '//net-upload-api.cli.im/upload?kid=cliim',
+  uploadDomain: '//upload-api.cliim.net/upload?kid=cliim',
+  // uploadTokenUrl: '//net-upload-api.cli.im/qiniu/uptoken',
+  uploadTokenUrl: '//upload-api.cliim.net/qiniu/uptoken',
+  uploadQiniuUrl: '//up.qbox.me/',
+  qiniuSourceUrl: '//qiniu-nc.clewm.net/',
+  analysisUrl: '//analysis-api.cliim.net',
+};
+
+export function getOriginData() {
+  return origin;
+}
+
+export default origin;

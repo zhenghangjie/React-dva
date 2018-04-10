@@ -1,0 +1,453 @@
+@import "~antd/lib/style/themes/default.less";
+
+.header {
+  padding: 0 12px 0 0;
+  background: #fff;
+  margin-bottom: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+  height: 48px;
+  line-height: 48px;
+  position: fixed;
+  width: 100%;
+}
+
+.none {
+  display: none;
+}
+
+:global(.none) {
+  display: none;
+}
+
+:global {
+  .pos-rlt {
+    position: relative;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.headerCenter {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 14px;
+  position: absolute;
+}
+
+.headerImg {
+  width: 375px;
+  position: absolute;
+  z-index: 99;
+}
+
+.alert {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  top: 0;
+  z-index: 999;
+}
+
+.editContent {
+  width: 375px;
+  margin: 0 auto;
+  margin-top: 76px;
+  margin-bottom: 69px;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+.companyName {
+  text-align: center;
+  position: absolute;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 30px;
+  width: 375px;
+  z-index: 99;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 104px;
+  overflow: hidden;
+}
+.closeBtn {
+  float: right;
+  cursor: pointer;
+}
+
+.editContent .moduleContent {
+  padding: 10px;
+  margin-top: 60px;
+}
+
+.NavContent {
+  position: fixed;
+  width: 200px;
+  top: 49px;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.operationShow {
+  transform: translateX(-375px);
+  transition: transform 0.3s;
+}
+
+.operationContent,
+.operationShow {
+  z-index: 999;
+  position: fixed;
+  width: 375px;
+  top: 49px;
+  bottom: 0;
+  background: #fff;
+  transition: left .3s linear;
+  -webkit-transition: -webkit-transform 0.3s;
+  right: -375px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+}
+
+.mediaModuleContent {
+  display: block;
+}
+
+.mediaModuleTitle {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #e9e9e9;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #2e2e2e;
+}
+
+.mediaModule {
+  height: 44px;
+  line-height: 44px;
+  display: block;
+  border-bottom: 0;
+  color: #373737;
+  font-size: 14px;
+  padding-left: 44px;
+  cursor: pointer;
+}
+
+.mediaModule:hover {
+  color: @green;
+  background: rgba(76, 175, 80, 0.10);
+}
+
+.mediaModule:last-child {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.mediaModule {
+  :global {
+    .anticon-cli-txt,
+    .anticon-cli-image,
+    .anticon-cli-file,
+    .anticon-cli-audio,
+    .anticon-cli-video,
+    .anticon-cli-form {
+      color: #999;
+    }
+  }
+}
+
+.mediaModule:hover {
+  :global {
+    .anticon-cli-txt,
+    .anticon-cli-image,
+    .anticon-cli-file,
+    .anticon-cli-audio,
+    .anticon-cli-video,
+    .anticon-cli-form {
+      color: @green;
+    }
+  }
+}
+
+.moduleContent {
+  :global {
+    .anticon-cli-txt,
+    .anticon-cli-image,
+    .anticon-cli-file,
+    .anticon-cli-audio,
+    .anticon-cli-video,
+    .anticon-cli-form {
+      color: #bbb;
+    }
+  }
+}
+:global {
+  .ant-btn-primary {
+    background-color: @green;
+    border-color: @green;
+  }
+  .ant-btn-primary:hover {
+    background-color: @green;
+    border-color: @green;
+  }
+  .ant-btn-primary:focus {
+    background-color: @green;
+    border-color: @green;
+  }
+  .ant-card-body {
+    padding: 30px 20px;
+  }
+  .ant-upload.ant-upload-select-picture-card {
+    height: auto !important;
+    min-height: 194px;
+  }
+  .ant-card-bordered {
+    border: none !important;
+  }
+  .ant-message-notice-content {
+    position: relative;
+  }
+}
+
+.clibtn:hover, .clibtn:focus {
+  color: @green;
+  border-color: @green;
+}
+
+:global {
+  .ant-progress-bg {
+    background-color: #52c41a !important;
+  }
+  .ant-progress-line {
+    padding: 0 28px !important;
+  }
+}
+
+.moduleText {
+  cursor: pointer;
+  position: relative;
+  border: 3px solid #fff;
+}
+
+.moduleText:hover {
+  background: #bbb;
+  z-index: 10;
+}
+
+.moduleText .mask {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background: #000;
+  top: 0;
+  opacity: .5;
+  border-radius: 4px;
+}
+
+.moduleText .operationBtn {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-size: 12px;
+  color: #fff;
+  width: 98%;
+}
+
+.moduleText:hover .mask {
+  display: block;
+}
+
+.borderFocus {
+  border: 3px solid #85cd9c;
+  border-radius: 4px;
+}
+
+.iconClose {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.qrcodeIcon {
+  font-size: 22px;
+  color: @green;
+  top: 3px;
+  position: relative;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.catologueName {
+  color: @green;
+  padding: 0 2px;
+  cursor: pointer;
+  overflow: hidden;
+  max-width: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  float: left;
+}
+
+.qrcodeContent {
+  width: 240px;
+  margin: 16px;
+  margin-top: 66px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(31, 31, 31, 0.16);
+  position: fixed;
+  right: 45px;
+  z-index: 9999;
+}
+
+.qrcodeContent:before {
+  content: '';
+  position: absolute;
+  top: -34px;
+  bottom: 150px;
+  left: -50px;
+  right: -50px;
+}
+
+.qrcodeContent:after {
+  content: '';
+  background-color: #eee;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #fff;
+  top: -10px;
+  left: 22px;
+  position: absolute;
+}
+
+.qrcodeContent .qrcodeTitle {
+  margin-top: 28px;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.qrcodeContent img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.operatingBtnContent {
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 42px;
+}
+
+:global {
+  .progressContent {
+    color: #666;
+    font-size: 13px;
+    padding-top: 8px;
+    position: relative;
+  }
+  .progressContent i {
+    position: absolute;
+    top: -19px;
+    right: 3px;
+    padding: 4px;
+    cursor: pointer;
+  }
+  .loadingProgressContent {
+    width: 100%;
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px dashed #d9d9d9;
+    border-radius: 4px;
+    padding: 54px 8px;
+  }
+}
+
+.operatingDown {
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  border-right: 1px solid #d7d7d7;
+  padding-right: 5px;
+  float: left;
+}
+
+.operatingDown:hover, .operatingBeautify:hover {
+  color: #373737;
+}
+
+.operatingBeautify {
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: right;
+  padding-left: 7px;
+  float: left;
+}
+
+.saveSuccess {
+  position: absolute;
+  top: 18px;
+  left: 150px;
+}
+
+:global {
+  .ant-notification-topLeft {
+    left: 50% !important;
+    margin-left: -210px;
+    width: 420px;
+  }
+}
+
+.collectQuestion {
+  font-size: 13px;
+  color: #999;
+  float: right;
+}
+.collectQuestion:hover, .collectQuestion:focus {
+  color: #999;
+  text-decoration: none;
+}
+
+.collectContent {
+  width: 375px;
+  position: absolute;
+  bottom: 40px;
+}
+
+.collectContentHide {
+  display: none;
+}
+
+.collectName {
+  font-size: 12px;
+  color: #999;
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  float: right;
+}
+
+.showCollect {
+  margin-top: 3px;
+  float: right;
+}
+
+.collectQuestionIcon {
+  font-size: 15px;
+}

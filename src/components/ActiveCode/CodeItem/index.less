@@ -1,0 +1,21 @@
+.example {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 30px 50px;
+  margin: 20px 36px;
+}
+
+.root {
+  :global {
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-card-wider-padding .ant-card-body {
+      padding: 0;
+    }
+    .ant-card-loading-content {
+      padding: 20px 36px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="//static.clewm.net/static/images/favicon.ico" mce_href="//static.clewm.net/static/images/favicon.ico" type="image/x-icon">
+  <title></title>
+<script src="//static.clewm.net/cli/js/lib/jquery191.js"></script>
+<script>
+/* eslint-disable */
+var ncDomain = 'nc.cli.im',
+		nowDomain = window.location.href;
+if (nowDomain.match(/cli.me/g)) {
+	ncDomain = 'nc.cli.me';
+} else if (nowDomain.match(/cliim.net/g)) {
+	ncDomain = 'nc.cliim.net';
+} else if (nowDomain.match(/cliim.com/g)) {
+	ncDomain = 'nc.cliim.com';
+}
+function getUrlPara(name) {  
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");  
+  var r = window.location.search.substr(1).match(reg);  
+  if (r != null) return unescape(r[2]); return '';  
+}
+console.log(document.cookie);
+$.ajax({
+  async: false, 
+  type: "get", 
+  url: '//'+ ncDomain +'/api/sso/sso_server', 
+  xhrFields: {
+    withCredentials: true
+ 	},
+  data:{
+  	ssid: getUrlPara('ssid'),
+	  type: getUrlPara('type'),
+	  keepstate: getUrlPara('keepstate'),
+	  jsonpCallback: getUrlPara('jsonpCallback'),
+  },
+  success : function(ret) { 
+  },failure :function(){
+  	console.log('nencao sso fail');
+  }
+}); 
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

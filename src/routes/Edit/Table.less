@@ -1,0 +1,148 @@
+@import "../../common/tableGlobal.less";
+.table input {
+  border: none;
+  background: inherit;
+  width: 100%;
+}
+
+.operationBtn {
+  display: block;
+  width: 32px;
+}
+
+.textCenter {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.tableChooseDefault {
+  padding: 6px;
+}
+
+.tableChooseDefault:hover {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.17);
+  padding: 6px;
+}
+
+.tableDefault1.tableEditDefault,.tableDefault2.tableEditDefault,.tableDefault3.tableEditDefault,.tableDefault4.tableEditDefault,.tableDefault5.tableEditDefault,.tableDefault6.tableEditDefault {
+  :global {
+    table {
+      padding: 1px!important;
+    }
+    .ant-table-thead > tr > th {
+      color: rgba(0, 0, 0, .85)!important;
+      font-weight: bold;
+    }
+    .ant-table-tbody > tr:hover {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
+      transform: translate3d(0, -1px, 0);
+    }
+  }
+}
+
+.tableDefault1.tableEditDefault {
+  :global {
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 30%;
+    }
+    .ant-table-thead > tr > th:nth-child(2) {
+      width: 55%;
+    }
+    .ant-table-thead > tr > th input {
+      font-weight: bold;
+    }
+  }
+}
+
+.tableDefault2.tableEditDefault {
+  :global {
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 85%;
+    }
+    .ant-table-tbody > tr > td:nth-child(1) {
+      width: 25%;
+    }
+    .ant-table-thead > tr > th input {
+      font-weight: bold;
+    }
+  }
+}
+
+.tableDefault3.tableEditDefault {
+  :global {
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 85%;
+    }
+    .ant-table-thead > tr > th:nth-child(1) input {
+      text-align: center;
+      font-weight: bold;
+    }
+    .ant-table-tbody > tr > td:nth-child(1) {
+      width: 15%;
+    }
+    .ant-table-tbody > tr > td:nth-child(1) > input {
+      text-align: center;
+    }
+    .ant-table-tbody > tr > td:nth-child(3) {
+      width: 15%;
+    }
+  }
+}
+
+.tableDefault4.tableEditDefault {
+  :global {
+    .ant-table-thead > tr > th:nth-child(2) {
+      width: 49%;
+    }
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 5%;
+    }
+    .ant-table-thead > tr > th:nth-child(3) {
+      width: 10%;
+    }
+    .ant-table-thead > tr > th:nth-child(1) input, .ant-table-thead > tr > th:nth-child(3) input, .ant-table-thead > tr > th:nth-child(4) input {
+      text-align: center;
+      font-weight: bold;
+    }
+    .ant-table-thead > tr > th:nth-child(2) input {
+      font-weight: bold;
+    }
+    .ant-table-tbody > tr > td:nth-child(1) {
+      width: 15%;
+    }
+    .ant-table-tbody > tr > td:nth-child(1) input, .ant-table-tbody > tr > td:nth-child(3) input {
+      text-align: center;
+    }
+    .ant-table-tbody > tr > td:nth-child(3) {
+      width: 20%;
+    }
+  }
+}
+
+.tableDefault5.tableEditDefault {
+  :global {
+    .ant-table-tbody > tr > td:nth-child(1) {
+      width: 25%;
+    }
+    .ant-table-tbody > tr > td:nth-child(3) {
+      width: 16%;
+    }
+    .ant-table-tbody > tr:hover > td:nth-child(3) {
+      background-color: #fff;
+    }
+  }
+}
+
+.tableDefault6.tableEditDefault {
+  :global {
+    .ant-table-thead > tr > th:nth-child(1) {
+      width: 85%;
+    }
+    .ant-table-thead > tr > th input {
+      font-weight: bold;
+    }
+    .ant-table-body input {
+      text-align: center;
+    }
+  }
+}

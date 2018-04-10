@@ -1,0 +1,75 @@
+:global {
+  .ql-container {
+    font-size: 14px;
+  }
+  .ql-snow .ql-picker.ql-size .ql-picker-label::before,
+  .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+    content: '正文中';
+    font-size: 14px;
+  }
+  .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+    content: '正文小';
+    font-size: 14px;
+  }
+  .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+    content: '正文大';
+    font-size: 14px;
+  }
+  .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+    .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+    content: '标题';
+    font-size: 14px;
+  }
+  /* editor style */
+  .ql-editor {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .ql-editor .ql-size-huge {
+    font-size: 20px;
+  }
+  .ql-editor .ql-size-large {
+    font-size: 16px;
+  }
+  .ql-editor .ql-size-small {
+    font-size: 12px;
+  }
+  .ql-editor ol, .ql-editor ul {
+    padding-left: 0.5em;
+  }
+  /* editor style end */
+  .ql-toolbar.ql-snow {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .ql-toolbar.ql-snow .ql-formats {
+    margin-right: 0;
+  }
+  .ql-snow.ql-toolbar button,
+  .ql-snow .ql-toolbar button,
+  .ql-snow .ql-picker {
+    margin-right: 4px;
+  }
+  .ql-snow .ql-color-picker .ql-picker-options {
+    width: 192px;
+  }
+  .ql-snow .ql-size.ql-picker {
+    width: 72px;
+  }
+  .ql-snow .ql-stroke {
+    stroke: #999;
+  }
+  .quill .ql-editor {
+    min-height: 240px;
+  }
+  /*.ql-clean:before {
+    font-family: "anticon", "clifont" !important;
+    content: "\E66B";
+  }
+  .ql-clean svg {
+    display: none;
+  }*/
+}
